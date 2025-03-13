@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('mengabsens', function (Blueprint $table) {
             $table->id();
+            $table->date('tanggal');
+            $table->time('jam_masuk');
+            $table->time('jam_pulang');
+            $table->enum('status', ['hadir', 'izin', 'alpa', 'sakit']);
+            $table->text('keterangan')->nullable();
+            $table->foreignId('id_guru')->references('id')->on('gurus')->onDelete('cascade');
+            $table->foreignId('id_siswa')->references('id')->on('siswas')->onDelete('cascade');
             $table->timestamps();
         });
     }

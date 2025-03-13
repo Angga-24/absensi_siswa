@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('gurus', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->string('nohp');
+            $table->string('mata_pelajaran');
+            $table->string('nip');
+            $table->string('username');
+            $table->string('password');
+            $table->text('alamat');
+            $table->foreignId('id_level')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
