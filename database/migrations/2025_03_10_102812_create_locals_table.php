@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('tingkat');
             $table->integer('kapasitas');
             $table->string('tahun_ajaran');
-            $table->text('jadwal_mapel');
             $table->foreignId('id_guru')->references('id')->on('gurus')->onDelete('cascade');
             $table->foreignId('id_jurusan')->references('id')->on('jurusans')->onDelete('cascade');
             $table->timestamps();

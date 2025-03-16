@@ -18,9 +18,9 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
-        'email',
+        'username',
         'password',
+        'level',
     ];
 
     /**
@@ -44,5 +44,11 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    // Relasi ke model Siswa
+    public function siswa()
+    {
+        return $this->hasOne(siswa::class, 'id_user');
     }
 }

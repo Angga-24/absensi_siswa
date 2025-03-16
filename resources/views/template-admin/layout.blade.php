@@ -55,14 +55,14 @@
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
             <!-- Menu -->
-            @include('template.sidebar')
+            @include('template-admin.sidebar')
 
             <!-- / Menu -->
 
             <!-- Layout container -->
             <div class="layout-page">
                 <!-- Navbar -->
-                @include('template.navbar')
+                @include('template-admin.navbar')
 
 
                 <!-- / Navbar -->
@@ -77,7 +77,7 @@
                 <!-- / Content -->
 
                 <!-- Footer -->
-                @include('template.footer')
+                @include('template-admin.footer')
                 <!-- / Footer -->
 
                 <div class="content-backdrop fade"></div>
