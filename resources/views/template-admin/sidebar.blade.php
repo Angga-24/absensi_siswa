@@ -26,6 +26,12 @@
                   <div data-i18n="Analytics">Siswa</div>
               </a>
           </li>
+          <li class="menu-item {{ $menu == 'guru' ? 'active' : '' }}">
+              <a href="{{ route('guru.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-chalkboard"></i>
+                <div data-i18n="Analytics">Guru</div>
+                </a>
+          </li>
 
 
       </ul>

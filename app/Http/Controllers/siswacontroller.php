@@ -146,4 +146,11 @@ public function store(Request $request)
             'siswa' => $siswa
         ]);
     }
+
+    public function destroy($id)
+    {
+        $siswa = siswa::find($id);
+        $siswa->delete();
+        return redirect(route('siswa.index'));
+    }
 }
