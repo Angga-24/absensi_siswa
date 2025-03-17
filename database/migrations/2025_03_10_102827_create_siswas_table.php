@@ -22,6 +22,7 @@ return new class extends Migration
             $table->text('alamat');
             $table->string('nama_wm');
             $table->string('nohp_wm');
+            $table->enum('status', ['null','hadir', 'izin', 'sakit', 'alpa']);
             $table->foreignId('id_local')->references('id')->on('locals')->onDelete('cascade');
             $table->foreignId('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
