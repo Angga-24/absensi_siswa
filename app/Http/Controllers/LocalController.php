@@ -30,16 +30,13 @@ class LocalController extends Controller
         // Ambil ID wali kelas yang sudah digunakan
         $guru_terpakai = Local::pluck('id_guru')->toArray();
 
-        // Ambil ID jurusan yang sudah digunakan
-        $jurusan_terpakai = Local::pluck('id_jurusan')->toArray();
-
         return view('admin.local.create', [
             'menu' => 'local',
             'title' => 'Tambah Data Kelas',
             'jurusan' => $jurusan,
             'guru' => $guru,
             'guru_terpakai' => $guru_terpakai, // Kirim data guru yang sudah dipakai
-            'jurusan_terpakai' => $jurusan_terpakai // Kirim data jurusan yang sudah dipakai
+            
         ]);
     }
 
@@ -101,7 +98,7 @@ class LocalController extends Controller
         $local = Local::with('jurusan', 'guru')->find($id);
         $gurus = guru::all(); // Ambil semua guru
         $jurusan = jurusan::all();
-        $jurusan_terpakai = Local::pluck('id_jurusan')->toArray();
+
         $guru_terpakai = Local::pluck('id_guru')->toArray();
 
         return view('admin.local.edit', [
@@ -111,7 +108,7 @@ class LocalController extends Controller
             'jurusan' => $jurusan,
             'guru' => $gurus, // Kirim variabel $gurus
             'guru_terpakai' => $guru_terpakai,
-            'jurusan_terpakai' => $jurusan_terpakai
+
         ]);
     }
 

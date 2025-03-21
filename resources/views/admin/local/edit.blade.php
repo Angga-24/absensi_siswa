@@ -70,9 +70,8 @@
                         <select name="id_jurusan" id="id_jurusan" class="form-control" required>
                             <option disabled selected value="">Pilih Jurusan</option>
                             @foreach($jurusan as $j)
-                            <option value="{{ $j->id }}" {{ $local->id_jurusan == $j->id ? 'selected' : '' }} @if (in_array($j->id, $jurusan_terpakai) && $local->id_jurusan != $j->id) disabled @endif>
-                                {{ $j->nama }}
-                            </option>
+                            <option value="{{$j['id']}}">{{$j['nama']}}</option>
+                            
                             @endforeach
                         </select>
                     </div>

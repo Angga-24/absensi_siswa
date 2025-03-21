@@ -20,7 +20,8 @@ class siswa extends Model
         'nama_wm',
         'nohp_wm',
         'id_local',
-        'id_user'
+        'id_user',
+        'tanggal_absen'
     ];
     // Relasi ke model Local
     public function local()

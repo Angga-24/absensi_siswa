@@ -2,7 +2,7 @@
       <div class="app-brand demo">
           <a href="index.html" class="app-brand-link">
 
-              <span class="app-brand-text demo menu-text fw-bolder ms-2">Sneat</span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2">Absen Smart</span>
           </a>
 
           <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -46,8 +46,14 @@
           </li>
           <li class="menu-item {{ $menu == 'user' ? 'active' : '' }}">
               <a href="{{ route('user.index') }}" class="menu-link">
-                  <i class="menu-icon tf-icons bx bx-users "></i>
-                  <div data-i18n="Analytics">Users</div>
+                <i class="menu-icon tf-icons fas fa-users"></i>
+                <div data-i18n="Analytics">Users</div>
+                </a>
+          </li>
+          <li class="menu-item {{ $menu == 'absenAdmin' ? 'active' : '' }}">
+              <a href="{{ route('absen.index2') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-calendar-check"></i>
+                  <div data-i18n="Analytics">Data Absen</div>
               </a>
           </li>
 
