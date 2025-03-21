@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('jurusans', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('kepala_jurusan');
+            $table->foreignId('id_guru')->references('id')->on('gurus')->onDelete('cascade');
             $table->timestamps();
         });
     }

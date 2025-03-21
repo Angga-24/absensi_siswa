@@ -22,7 +22,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="nohp">No Handphone</label>
-                    <input type="date" class="form-control" value="{{$guru->nohp}}" disabled>
+                    <input type="number" class="form-control" value="{{$guru->nohp}}" disabled>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="alamat">Alamat</label>

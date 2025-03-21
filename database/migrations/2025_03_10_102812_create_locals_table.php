@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('tingkat');
+            $table->string('urutan');
             $table->integer('kapasitas');
             $table->string('tahun_ajaran');
             $table->foreignId('id_guru')->references('id')->on('gurus')->onDelete('cascade');

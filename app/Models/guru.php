@@ -16,4 +16,9 @@ class guru extends Model
         'alamat',
         'id_level'
     ];
+
+    public function locals()
+    {
+        return $this->hasMany(Local::class, 'id_guru');
+    }
 }

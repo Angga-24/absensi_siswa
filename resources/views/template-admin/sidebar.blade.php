@@ -14,23 +14,41 @@
 
       <ul class="menu-inner py-1">
           <!-- Dashboard -->
-          <li class="menu-item {{ $menu == 'home' ? 'active' : '' }}">
-              <a href="{{ route('home') }}" class="menu-link">
+          <li class="menu-item {{ $menu == 'dashboard.admin' ? 'active' : '' }}">
+              <a href="{{ route('dashboard.admin') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-home-circle"></i>
                   <div data-i18n="Analytics">Dashboard</div>
               </a>
           </li>
           <li class="menu-item {{ $menu == 'siswa' ? 'active' : '' }}">
               <a href="{{ route('siswa.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-user"></i>
+                  <i class="menu-icon tf-icons bx bx-user"></i>
                   <div data-i18n="Analytics">Siswa</div>
               </a>
           </li>
           <li class="menu-item {{ $menu == 'guru' ? 'active' : '' }}">
               <a href="{{ route('guru.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-chalkboard"></i>
-                <div data-i18n="Analytics">Guru</div>
-                </a>
+                  <i class="menu-icon tf-icons bx bx-chalkboard"></i>
+                  <div data-i18n="Analytics">Guru</div>
+              </a>
+          </li>
+          <li class="menu-item {{ $menu == 'local' ? 'active' : '' }}">
+              <a href="{{ route('local.index') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-building-house"></i>
+                  <div data-i18n="Analytics">Local</div>
+              </a>
+          </li>
+          <li class="menu-item {{ $menu == 'ortu' ? 'active' : '' }}">
+              <a href="{{ route('ortu.index') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-user-pin "></i>
+                  <div data-i18n="Analytics">Orang Tua</div>
+              </a>
+          </li>
+          <li class="menu-item {{ $menu == 'user' ? 'active' : '' }}">
+              <a href="{{ route('user.index') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-users "></i>
+                  <div data-i18n="Analytics">Users</div>
+              </a>
           </li>
 
 
